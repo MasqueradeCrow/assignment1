@@ -2,8 +2,8 @@
 
 class Engine {
 public:
-	Engine () {}
-	~Engine() {}
+	Engine();
+	~Engine();
 
 	void print(); 
 };

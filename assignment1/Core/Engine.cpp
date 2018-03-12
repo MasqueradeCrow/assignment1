@@ -2,6 +2,14 @@
 #include <iostream>
 #include <SDL.h>
 
+Engine::Engine()
+{
+}
+
+Engine::~Engine()
+{
+}
+
 void Engine::print() {
-	std::cout << "engine.....\n";
+	std::cout << "hulb\n";
 }
