@@ -14,6 +14,7 @@ public:
 	void ThrowGrenade();
 
 	int wepChoice[3];
+	Weapon wepChoice[3];
 };
 #endif // !_PLAYER_H
 

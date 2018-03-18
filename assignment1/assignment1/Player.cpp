@@ -15,17 +15,15 @@ Player::~Player()
 {
 }
 
- void Player::Equip() {
+ void Player::Equip(Weapon w) {
+	 w.type;
 	 cout << "choose a weapon: 1 for pistol, 2 for rifle, 3 for grenade\n";
+	 //player input 
 	 int temp;
-	 int wepCounter = 0;
 	 cin >> temp;
-
 	 //checks for filled equipment slots
 	 for (int i = 0; i < 3; i++) {
-		 if (wepChoice[i] != NULL) {
-			 wepCounter++;
-		 }
+	
 		 switch (temp) {
 		 case 1:
 			 //pistol
@@ -49,31 +47,39 @@ Player::~Player()
 }
 
  void Player::ShootMain() {
-	 //checks if there is weapon
+	 //checks if there is weapon equipped
 		 if (wepChoice[0] == NULL) {
+
 			 cout << "You have no weapon equipped\n";
 		 }
 		 else {
+			 wepChoice[0].shoot();
+			 cout << "[Pistol equipped]\n";
 			 cout << "*You shot with the pistol*\n";
 		 }
 	 
  } 
 
  void Player::ShootSecondary() {
+	 //checks if there is weapon equipped
 	 if (wepChoice[1] == NULL) {
 		 cout << "You have no weapon equipped\n";
 	 }
 	 else {
+
+		 cout << "[Rifle equipped]\n";
 		 cout << "* You shot with the rifle *\n";
 	 }
 	
 }
 
  void Player::ThrowGrenade() {
+	 //checks if there is weapon equipped
 	 if (wepChoice[2] == NULL) {
 		 cout << "You have no weapon equipped\n";
 	 }
 	 else {
+		 cout << "[Grenade equipped]\n";
 		 cout << "* You thrown a grenade *\n";
 	 }
  }

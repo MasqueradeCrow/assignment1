@@ -1,18 +1,26 @@
 #pragma once
 #ifndef _WEAPON_H
 #define _WEAPON_H
+enum class WeaponType {
+	PISTOL,
+	RIFLE,
+	GRENADE,
+};
 class Weapon
 {
-	enum weapon {pistol, rifle, grenade};
 public:
-	Weapon();
-	~Weapon();
-private:
-	void Bullet();
-	void Grenade();
+	int type;
 
-	int bullets;
-	int grenades;
+	Weapon(WeaponType wt);
+	virtual ~Weapon();
+
+	void shoot();
+//private:
+//	//void Bullet();
+//	//void Grenade();
+//
+//	//int bullets;
+//	//int grenades;
 
 };
 

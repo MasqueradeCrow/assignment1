@@ -1,7 +1,7 @@
 #include "Weapon.h"
 #include <iostream>
 
-Weapon::Weapon()
+Weapon::Weapon(WeaponType wt)
 {
 }
 
@@ -9,11 +9,7 @@ Weapon::Weapon()
 Weapon::~Weapon()
 {
 }
+/*
+Weapon::shoot() {
 
-void Weapon::Bullet() {
-
-}
-
-void Weapon::Grenade() {
-
-}
+}*/

@@ -9,12 +9,12 @@
 //
 //	system("PAUSE");
 //	return 0;
-using namespace std;
-
 int main() {
 	Player player;
+	Weapon p;
 
-	player.Equip();
+	player.Equip(p);
+
 	player.ShootMain();
 	player.ShootSecondary();
 	player.ThrowGrenade();
